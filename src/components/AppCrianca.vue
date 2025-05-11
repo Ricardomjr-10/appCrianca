@@ -39,11 +39,23 @@ import { ref } from 'vue'
     // Por exemplo, com base no 'tema.id'.
     if (tema.id === 1) {
         itensDoTema.value = [
-            {id: 101, nome: 'Cachorro', imagem: './assets/cachorro.png'},
-            {id: 102, nome: 'gato', imagem: './assets/gato.png'},
-            {id: 103, nome: 'coelho', imagem: './assets/coelho.png'},
+            {id: 101, nome: 'Cachorro', imagem: '/src/assets/cachorro.jpg'},
+            {id: 102, nome: 'gato', imagem: '/src/assets/gato.jpg'},
+            {id: 103, nome: 'coelho', imagem: '/src/assets/coelho.jpg'},
             //mais animais
         ]
+    }else {
+        itensDoTema.value = []
     }
+    }
+
+    const falarNome = (nome) => {
+        if ('speechSynthesis' in window) {
+            const utterance = new SpeechSynthesisUtterance(nome)
+            utterance.lang = 'pt-BR' // escolha da linguagem
+            speechSynthesis.speak(utterance)
+        } else {
+            alert('Seu navegador não suporta a função de fala.')
+        }
     }
 </script>
