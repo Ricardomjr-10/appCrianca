@@ -1,14 +1,16 @@
 <template>
- <div></div>
+
+  <AppCrianca/>
+
 </template>
 
 <script>
-
+import AppCrianca from './components/AppCrianca.vue'
 
 export default {
   name: 'App',
   components: {
-  
+    AppCrianca,
   }
 }
 </script>
