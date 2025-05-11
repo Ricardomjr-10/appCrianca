@@ -40,9 +40,9 @@ import { ref } from 'vue'
     // Por exemplo, com base no 'tema.id'.
     if (tema.id === 1) {
         itensDoTema.value = [
-            {id: 101, nome: 'Cachorro', imagem: '/src/assets/cachorro.jpg'},
-            {id: 102, nome: 'gato', imagem: '/src/assets/gato.jpg'},
-            {id: 103, nome: 'coelho', imagem: '/src/assets/coelho.jpg'},
+            {id: 101, nome: 'Cachorro', imagem: '/assets/cachorro.jpg'},
+            {id: 102, nome: 'gato', imagem: '/assets/gato.jpg'},
+            {id: 103, nome: 'coelho', imagem: '/assets/coelho.jpg'},
             //mais animais
         ]
     }else {
@@ -60,3 +60,47 @@ import { ref } from 'vue'
         }
     }
 </script>
+
+<style scoped> 
+.tema-escolha {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tema-escolha button {
+  font-size: 1.1em;
+  padding: 8px 15px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px #eee;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-top: 0;
+}
+</style>
