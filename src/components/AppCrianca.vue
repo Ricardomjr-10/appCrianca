@@ -10,6 +10,7 @@
         <div v-if="temaSelecionado" class="cards-container">
             <div v-for="item in itensDoTema" :key="item.id" class="card" @click="falarNome(item.nome)">
                 <img :src="item.imagem" :alt="item.nome">
+                <img :src="itensDoTema[0].imagem" alt="">
                 <p>{{ item.nome }}</p>
             </div>
         </div>
