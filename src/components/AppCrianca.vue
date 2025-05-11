@@ -30,7 +30,20 @@ import { ref } from 'vue'
         {id: 3, nome: 'Objetos da casa'}
     ])
 
-    const selecionarTema = () => {
-        return alert('Tema selecionado: ' + temas.value[0].nome)
+    const temaSelecionado = ref(null)
+    const itensDoTema = ref([])
+
+    const selecionarTema = (tema) => {
+        temaSelecionado.value = tema
+        // Aqui, você carregaria os itens (imagens e nomes) correspondentes ao tema escolhido.
+    // Por exemplo, com base no 'tema.id'.
+    if (tema.id === 1) {
+        itensDoTema.value = [
+            {id: 101, nome: 'Cachorro', imagem: './assets/cachorro.png'},
+            {id: 102, nome: 'gato', imagem: './assets/gato.png'},
+            {id: 103, nome: 'coelho', imagem: './assets/coelho.png'},
+            //mais animais
+        ]
+    }
     }
 </script>
