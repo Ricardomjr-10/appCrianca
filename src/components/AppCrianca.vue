@@ -56,7 +56,7 @@ import { ref } from 'vue'
         itensDoTema.value = [
         { id: 301, nome: 'Mesa', imagem: '/assets/mesa.png' },
             { id: 302, nome: 'Cadeira', imagem: '/assets/cadeira.png' },
-            { id: 303, nome: 'Livro', imagem: '/assets/livro.png' }
+            { id: 303, nome: 'Livro', imagem: '/assets/livro.jpeg' }
             // ... mais objetos
         ]
         
