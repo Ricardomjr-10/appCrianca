@@ -47,9 +47,9 @@ import { ref } from 'vue'
 
     }else if (tema.id === 2) {
         itensDoTema.value = [
-             { id: 201, nome: 'Maçã', imagem: '/assets/maca.png' },
-            { id: 202, nome: 'Banana', imagem: '/assets/banana.png' },
-            { id: 203, nome: 'Morango', imagem: '/assets/morango.png' }
+             { id: 201, nome: 'Maçã', imagem: '/assets/maca.jpg' },
+            { id: 202, nome: 'Banana', imagem: '/assets/banana.jpg' },
+            { id: 203, nome: 'Morango', imagem: '/assets/morango.jpg' }
             // ... mais frutas
         ]
     } else if (tema.id === 3) {
