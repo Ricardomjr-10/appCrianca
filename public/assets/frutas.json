@@ -1,0 +1,11 @@
+[
+    { "id": 201, "nome": "Maçã", "imagem": "/assets/maca.jpg"},
+    { "id": 202, "nome": "Banana", "imagem": "/assets/banana.jpg"},
+    { "id": 203, "nome": "Morango", "imagem": "/assets/morango.jpg"},
+    { "id": 201, "nome": "Maçã", "imagem": "/assets/maca.jpg"},
+    { "id": 202, "nome": "Banana", "imagem": "/assets/banana.jpg"},
+    { "id": 203, "nome": "Morango", "imagem": "/assets/morango.jpg"},
+    { "id": 201, "nome": "Maçã", "imagem": "/assets/maca.jpg"},
+    { "id": 202, "nome": "Banana", "imagem": "/assets/banana.jpg"},
+    { "id": 203, "nome": "Morango", "imagem": "/assets/morango.jpg"}
+]

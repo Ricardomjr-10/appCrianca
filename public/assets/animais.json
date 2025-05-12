@@ -1,0 +1,11 @@
+[
+    {"id": 101, "nome": "cachorro", "imagem":"'/assets/cachorro.jpg"},
+    {"id": 102, "nome": "gato", "imagem": "/assets/gato.jpg"},
+    {"id": 103, "nome": "coelho", "imagem": "/assets/coelho.jpg"},
+    {"id": 101, "nome": "cachorro", "imagem": "/assets/cachorro.jpg"},
+    {"id": 102, "nome": "gato", "imagem": "/assets/gato.jpg"},
+    {"id": 103, "nome": "coelho", "imagem": "/assets/coelho.jpg"},
+    {"id": 101, "nome": "cachorro", "imagem": "/assets/cachorro.jpg"},
+    {"id": 102, "nome": "gato", "imagem": "/assets/gato.jpg"},
+    {"id": 103, "nome": "coelho", "imagem": "/assets/coelho.jpg"}
+]
