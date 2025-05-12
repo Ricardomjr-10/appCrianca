@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Escolha um tema</h1>
+        <h1>cards divertidos</h1>
         <div class="tema-escolha">
             <button v-for="tema in temas" :key="tema.id" @click="selecionarTema(tema)">
                 {{ tema.nome }}
@@ -15,7 +15,7 @@
         </div>
 
         <div v-else>
-            <p>Selecionar um tema para começar</p>
+            <p class="para">Selecionar um tema para começar</p>
         </div>
 
     </div>
@@ -42,12 +42,27 @@ import { ref } from 'vue'
             {id: 101, nome: 'Cachorro', imagem: '/assets/cachorro.jpg'},
             {id: 102, nome: 'gato', imagem: '/assets/gato.jpg'},
             {id: 103, nome: 'coelho', imagem: '/assets/coelho.jpg'},
+             {id: 101, nome: 'Cachorro', imagem: '/assets/cachorro.jpg'},
+            {id: 102, nome: 'gato', imagem: '/assets/gato.jpg'},
+            {id: 103, nome: 'coelho', imagem: '/assets/coelho.jpg'},
+            {id: 101, nome: 'Cachorro', imagem: '/assets/cachorro.jpg'},
+            {id: 102, nome: 'gato', imagem: '/assets/gato.jpg'},
+            {id: 103, nome: 'coelho', imagem: '/assets/coelho.jpg'},
+             {id: 101, nome: 'Cachorro', imagem: '/assets/cachorro.jpg'},
+            {id: 102, nome: 'gato', imagem: '/assets/gato.jpg'},
+            {id: 103, nome: 'coelho', imagem: '/assets/coelho.jpg'},
             //mais animais
         ]
 
     }else if (tema.id === 2) {
         itensDoTema.value = [
              { id: 201, nome: 'Maçã', imagem: '/assets/maca.jpg' },
+            { id: 202, nome: 'Banana', imagem: '/assets/banana.jpg' },
+            { id: 203, nome: 'Morango', imagem: '/assets/morango.jpg' },
+            { id: 201, nome: 'Maçã', imagem: '/assets/maca.jpg' },
+            { id: 202, nome: 'Banana', imagem: '/assets/banana.jpg' },
+            { id: 203, nome: 'Morango', imagem: '/assets/morango.jpg' },
+            { id: 201, nome: 'Maçã', imagem: '/assets/maca.jpg' },
             { id: 202, nome: 'Banana', imagem: '/assets/banana.jpg' },
             { id: 203, nome: 'Morango', imagem: '/assets/morango.jpg' }
             // ... mais frutas
@@ -77,31 +92,38 @@ import { ref } from 'vue'
 </script>
 
 <style scoped> 
+h1 {
+    text-transform: uppercase;
+}
+
 .tema-escolha {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
 .tema-escolha button {
   font-size: 1.1em;
   padding: 8px 15px;
   cursor: pointer;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f0f0f0;
+  border: 1px solid #258ef0;
+  border-radius: 10px;
+  background-color: #258ef0;
+  color: white;
+  font-weight: 700;
 }
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
 }
 
 .card {
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 10px;
+  padding: 1px;
   text-align: center;
   cursor: pointer;
   box-shadow: 1px 1px 3px #eee;
@@ -115,7 +137,11 @@ import { ref } from 'vue'
 
 .card p {
   font-weight: bold;
-  font-size: 0.9em;
+  font-size: 2em;
   margin-top: 0;
+}
+
+.para {
+    font-size: 2em;
 }
 </style>
