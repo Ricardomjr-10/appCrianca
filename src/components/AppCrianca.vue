@@ -44,6 +44,22 @@ import { ref } from 'vue'
             {id: 103, nome: 'coelho', imagem: '/assets/coelho.jpg'},
             //mais animais
         ]
+
+    }else if (tema.id === 2) {
+        itensDoTema.value = [
+             { id: 201, nome: 'Maçã', imagem: '/assets/maca.png' },
+            { id: 202, nome: 'Banana', imagem: '/assets/banana.png' },
+            { id: 203, nome: 'Morango', imagem: '/assets/morango.png' }
+            // ... mais frutas
+        ]
+    } else if (tema.id === 3) {
+        itensDoTema.value = [
+        { id: 301, nome: 'Mesa', imagem: '/assets/mesa.png' },
+            { id: 302, nome: 'Cadeira', imagem: '/assets/cadeira.png' },
+            { id: 303, nome: 'Livro', imagem: '/assets/livro.png' }
+            // ... mais objetos
+        ]
+        
     }else {
         itensDoTema.value = []
     }
