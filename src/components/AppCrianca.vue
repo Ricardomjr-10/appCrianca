@@ -119,3 +119,8 @@ h1 {
     font-size: 2em;
 }
 </style>
+
+<!-- falta fazer 
+ organizar as imagen em pastas,
+ colocar os temas: numeros e alfabeto,
+ colocar um icone no card que quando presionado faz o som do animal,fruta, letra e numero -->
