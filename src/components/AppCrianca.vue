@@ -7,13 +7,15 @@
             </button>
         </div>
 
-        <div v-if="temaSelecionado" class="cards-container">
+        <div v-if="itensDoTema.length > 0" class="cards-container">
             <div v-for="item in itensDoTema" :key="item.id" class="card" @click="falarNome(item.nome)">
                 <img :src="item.imagem" :alt="item.nome">
                 <p>{{ item.nome }}</p>
             </div>
         </div>
-
+        <div v-else-if="temaSelecionado">
+            <p>Carregando itens...</p>
+        </div>
         <div v-else>
             <p class="para">Selecionar um tema para começar</p>
         </div>
@@ -25,60 +27,32 @@
 import { ref } from 'vue'
 
     const temas = ref([
-        {id: 1, nome: 'Animais'},
-        {id: 2, nome: 'Frutas'},
-        {id: 3, nome: 'Objetos da casa'}
+        {id: 1, nome: 'Animais', arquivo: 'animais.json'},
+        {id: 2, nome: 'Frutas', arquivo: 'frutas.json'},
+        {id: 3, nome: 'Objetos da casa', arquivo: 'objetosCasa.json'}
     ])
 
     const temaSelecionado = ref(null)
     const itensDoTema = ref([])
 
-    const selecionarTema = (tema) => {
-        temaSelecionado.value = tema
-        // Aqui, você carregaria os itens (imagens e nomes) correspondentes ao tema escolhido.
-    // Por exemplo, com base no 'tema.id'.
-    if (tema.id === 1) {
-        itensDoTema.value = [
-            {id: 101, nome: 'Cachorro', imagem: '/assets/cachorro.jpg'},
-            {id: 102, nome: 'gato', imagem: '/assets/gato.jpg'},
-            {id: 103, nome: 'coelho', imagem: '/assets/coelho.jpg'},
-             {id: 101, nome: 'Cachorro', imagem: '/assets/cachorro.jpg'},
-            {id: 102, nome: 'gato', imagem: '/assets/gato.jpg'},
-            {id: 103, nome: 'coelho', imagem: '/assets/coelho.jpg'},
-            {id: 101, nome: 'Cachorro', imagem: '/assets/cachorro.jpg'},
-            {id: 102, nome: 'gato', imagem: '/assets/gato.jpg'},
-            {id: 103, nome: 'coelho', imagem: '/assets/coelho.jpg'},
-             {id: 101, nome: 'Cachorro', imagem: '/assets/cachorro.jpg'},
-            {id: 102, nome: 'gato', imagem: '/assets/gato.jpg'},
-            {id: 103, nome: 'coelho', imagem: '/assets/coelho.jpg'},
-            //mais animais
-        ]
+    const selecionarTema = async (tema) => {
+       temaSelecionado.value = tema
+       itensDoTema.value = []
 
-    }else if (tema.id === 2) {
-        itensDoTema.value = [
-             { id: 201, nome: 'Maçã', imagem: '/assets/maca.jpg' },
-            { id: 202, nome: 'Banana', imagem: '/assets/banana.jpg' },
-            { id: 203, nome: 'Morango', imagem: '/assets/morango.jpg' },
-            { id: 201, nome: 'Maçã', imagem: '/assets/maca.jpg' },
-            { id: 202, nome: 'Banana', imagem: '/assets/banana.jpg' },
-            { id: 203, nome: 'Morango', imagem: '/assets/morango.jpg' },
-            { id: 201, nome: 'Maçã', imagem: '/assets/maca.jpg' },
-            { id: 202, nome: 'Banana', imagem: '/assets/banana.jpg' },
-            { id: 203, nome: 'Morango', imagem: '/assets/morango.jpg' }
-            // ... mais frutas
-        ]
-    } else if (tema.id === 3) {
-        itensDoTema.value = [
-        { id: 301, nome: 'Mesa', imagem: '/assets/mesa.png' },
-            { id: 302, nome: 'Cadeira', imagem: '/assets/cadeira.png' },
-            { id: 303, nome: 'Livro', imagem: '/assets/livro.jpeg' }
-            // ... mais objetos
-        ]
-        
-    }else {
-        itensDoTema.value = []
+       try {
+        const response = await fetch(`/assets/${tema.arquivo}`)
+        if (!response.ok) {
+            throw new Error(`Erro ao carregar dados de ${tema.nome}`);
+        }
+        const data = await response.json()
+        itensDoTema.value = data
+       } catch (error) {
+        console.error('Erro ao carregar os dados', error)
+        alert(`Não foi possivel carregar os itens de ${tema.nome}`)
+        temaSelecionado.value = null
+       }
     }
-    }
+
 
     const falarNome = (nome) => {
         if ('speechSynthesis' in window) {
