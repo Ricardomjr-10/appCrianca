@@ -2,16 +2,16 @@
     {
         "id": 301,
         "nome": "Mesa",
-        "imagem": "/assets/mesa.png"
+        "imagem": "/assets/objetos/mesa.png"
     },
     {
         "id": 302,
         "nome": "Cadeira",
-        "imagem": "/assets/cadeira.png"
+        "imagem": "/assets/objetos/cadeira.png"
     },
     {
         "id": 303,
         "nome": "Livro",
-        "imagem": "/assets/livro.jpeg"
+        "imagem": "/assets/objetos/livro.jpeg"
     }
 ]
