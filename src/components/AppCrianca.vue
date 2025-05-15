@@ -29,7 +29,9 @@ import { ref } from 'vue'
     const temas = ref([
         {id: 1, nome: 'Animais', arquivo: 'animais.json'},
         {id: 2, nome: 'Frutas', arquivo: 'frutas.json'},
-        {id: 3, nome: 'Objetos da casa', arquivo: 'objetosCasa.json'}
+        {id: 3, nome: 'Objetos da casa', arquivo: 'objetosCasa.json'},
+        {id: 4, nome: 'Numeros', arquivo: 'numeros.json'},
+        {id: 5, nome: 'Letras', arquivo: 'letras.json'}
     ])
 
     const temaSelecionado = ref(null)
