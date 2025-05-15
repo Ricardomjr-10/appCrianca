@@ -3,5 +3,45 @@
         "id": 401, 
         "nome": "Um",
         "imagem": "assets/numeros/um.jpeg"
+    },
+       {
+        "id": 402, 
+        "nome": "Dois",
+        "imagem": "assets/numeros/dois.jpeg"
+    },
+       {
+        "id": 403, 
+        "nome": "Três",
+        "imagem": "assets/numeros/tres.jpeg"
+    },
+       {
+        "id": 404, 
+        "nome": "Quatro",
+        "imagem": "assets/numeros/quatro.jpeg"
+    },
+       {
+        "id": 405, 
+        "nome": "Cinco",
+        "imagem": "assets/numeros/cinco.jpeg"
+    },
+       {
+        "id": 406, 
+        "nome": "Seis",
+        "imagem": "assets/numeros/seis.jpeg"
+    },
+       {
+        "id": 407, 
+        "nome": "Sete",
+        "imagem": "assets/numeros/sete.jpeg"
+    },
+       {
+        "id": 408, 
+        "nome": "Oito",
+        "imagem": "assets/numeros/oito.jpeg"
+    },
+       {
+        "id": 409, 
+        "nome": "Nove",
+        "imagem": "assets/numeros/nove.jpeg"
     }
 ]
