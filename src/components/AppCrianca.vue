@@ -9,7 +9,7 @@
 
         <div v-if="itensDoTema.length > 0" class="cards-container">
             <div v-for="item in itensDoTema" :key="item.id" class="card" @click="falarNome(item.nome)">
-                <img :src="item.imagem" :alt="item.nome">
+                <img :src="item.imagem" :alt="item.nome" style="width: 200px; height: 200px;">
                 <p>{{ item.nome }}</p>
             </div>
         </div>
@@ -97,6 +97,7 @@ h1 {
 }
 
 .card {
+    /* width: 200px; */
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1px;
