@@ -1,22 +1,17 @@
 <template>
 
   <AppCrianca/>
-  <ApiDog/>
-  <ApiGemini/>
 
 </template>
 
 <script>
-import ApiDog from './components/ApiDog.vue';
-import ApiGemini from './components/ApiGemini.vue';
+
 import AppCrianca from './components/AppCrianca.vue'
 
 export default {
   name: 'App',
   components: {
-    AppCrianca,
-    ApiDog,
-    ApiGemini
+    AppCrianca
   }
 }
 </script>

@@ -121,9 +121,13 @@ h1 {
 .para {
     font-size: 2em;
 }
+
+@media  (max-width:480px) {
+    .tema-escolha {
+        background-color: red;
+    }
+}
 </style>
 
 <!-- falta fazer 
- organizar as imagen em pastas,
- colocar os temas: numeros e alfabeto,
  colocar um icone no card que quando presionado faz o som do animal,fruta, letra e numero -->
