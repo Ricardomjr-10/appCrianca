@@ -23,5 +23,110 @@
         "id": 505,
         "nome": "E",
         "imagem": "/assets/letras/e.jpeg"
+    },
+    {
+        "id": 506,
+        "nome": "F",
+        "imagem": "/assets/letras/f.jpeg"
+    },
+       {
+        "id": 507,
+        "nome": "G",
+        "imagem": "/assets/letras/g.jpeg"
+    },
+       {
+        "id": 508,
+        "nome": "H",
+        "imagem": "/assets/letras/h.jpeg"
+    },
+       {
+        "id": 509,
+        "nome": "I",
+        "imagem": "/assets/letras/i.jpeg"
+    },
+       {
+        "id": 510,
+        "nome": "J",
+        "imagem": "/assets/letras/j.jpeg"
+    },
+    {
+        "id": 511,
+        "nome": "K",
+        "imagem": "/assets/letras/k.jpeg"
+    },
+       {
+        "id": 512,
+        "nome": "L",
+        "imagem": "/assets/letras/l.jpeg"
+    },
+       {
+        "id": 513,
+        "nome": "M",
+        "imagem": "/assets/letras/m.jpeg"
+    },
+       {
+        "id": 514,
+        "nome": "N",
+        "imagem": "/assets/letras/n.jpeg"
+    },
+       {
+        "id": 515,
+        "nome": "O",
+        "imagem": "/assets/letras/o.jpeg"
+    },
+    {
+        "id": 516,
+        "nome": "P",
+        "imagem": "/assets/letras/p.jpeg"
+    },
+       {
+        "id": 517,
+        "nome": "Q",
+        "imagem": "/assets/letras/q.jpeg"
+    },
+       {
+        "id": 518,
+        "nome": "R",
+        "imagem": "/assets/letras/r.jpeg"
+    },
+       {
+        "id": 519,
+        "nome": "S",
+        "imagem": "/assets/letras/s.jpeg"
+    },
+       {
+        "id": 520,
+        "nome": "T",
+        "imagem": "/assets/letras/t.jpeg"
+    },
+    {
+        "id": 521,
+        "nome": "U",
+        "imagem": "/assets/letras/u.jpeg"
+    },
+       {
+        "id": 522,
+        "nome": "V",
+        "imagem": "/assets/letras/v.jpeg"
+    },
+       {
+        "id": 523,
+        "nome": "W",
+        "imagem": "/assets/letras/w.jpeg"
+    },
+       {
+        "id": 524,
+        "nome": "X",
+        "imagem": "/assets/letras/x.jpeg"
+    },
+       {
+        "id": 525,
+        "nome": "Y",
+        "imagem": "/assets/letras/y.jpeg"
+    },
+    {
+        "id": 526,
+        "nome": "Z",
+        "imagem": "/assets/letras/z.jpeg"
     }
 ]
