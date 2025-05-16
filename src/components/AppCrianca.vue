@@ -125,6 +125,12 @@ h1 {
 @media  (max-width:480px) {
     .tema-escolha {
         background-color: red;
+        display:block;
+    }
+
+    .tema-escolha button {
+      margin-right: 5px;
+      margin-bottom: 5px;
     }
 }
 </style>
