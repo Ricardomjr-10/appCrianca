@@ -9,7 +9,7 @@
 
         <div v-if="itensDoTema.length > 0" class="cards-container">
             <div v-for="item in itensDoTema" :key="item.id" class="card" @click="falarNome(item.nome)">
-                <img :src="item.imagem" :alt="item.nome" style="width: 200px; height: 200px;">
+                <img :src="item.imagem" :alt="item.nome" class="imagem">
                 <p>{{ item.nome }}</p>
             </div>
         </div>
@@ -121,6 +121,10 @@ h1 {
 .para {
     font-size: 2em;
 }
+    .imagem {
+        width: 200px;
+        height: 200px;
+    }
 
 @media  (max-width:480px) {
     .tema-escolha {
@@ -131,6 +135,16 @@ h1 {
     .tema-escolha button {
       margin-right: 5px;
       margin-bottom: 5px;
+    }
+    .cards-container {
+       grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+    }
+    .card p {
+        font-size: 1.2em;
+    }
+    .imagem {
+        width: 70px;
+        height: 70px;
     }
 }
 </style>
