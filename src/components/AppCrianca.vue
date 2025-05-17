@@ -128,7 +128,7 @@ h1 {
 
 @media  (max-width:480px) {
     .tema-escolha {
-        background-color: red;
+        /* background-color: red; */
         display:block;
     }
 
