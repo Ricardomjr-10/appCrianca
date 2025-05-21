@@ -5,11 +5,13 @@
             <button v-for="tema in temas" :key="tema.id" @click="selecionarTema(tema)">
                 {{ tema.nome }}
             </button>
+            
         </div>
-
+        
         <div v-if="itensDoTema.length > 0" class="cards-container">
             <div v-for="item in itensDoTema" :key="item.id" class="card" @click="falarNome(item.nome)">
                 <img :src="item.imagem" :alt="item.nome" class="imagem">
+                <FontAwesomeIcon :icon="faVolumeHigh"/>
                 <p>{{ item.nome }}</p>
             </div>
         </div>
@@ -25,6 +27,9 @@
 
 <script setup>
 import { ref } from 'vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons'
+
 
     const temas = ref([
         {id: 1, nome: 'Animais', arquivo: 'animais.json'},
@@ -42,6 +47,7 @@ import { ref } from 'vue'
        itensDoTema.value = []
 
        try {
+
         const response = await fetch(`/assets/${tema.arquivo}`)
         if (!response.ok) {
             throw new Error(`Erro ao carregar dados de ${tema.nome}`);
@@ -145,6 +151,9 @@ h1 {
     .imagem {
         width: 70px;
         height: 70px;
+    }
+    .fa-icon {
+        color: #4CAF50;
     }
 }
 </style>
