@@ -3,6 +3,7 @@
         <h1>cards divertidos</h1>
         <div class="tema-escolha">
             <button v-for="tema in temas" :key="tema.id" @click="selecionarTema(tema)">
+                  
                 {{ tema.nome }}
             </button>
             
@@ -11,7 +12,9 @@
         <div v-if="itensDoTema.length > 0" class="cards-container">
             <div v-for="item in itensDoTema" :key="item.id" class="card" @click="falarNome(item.nome)">
                 <img :src="item.imagem" :alt="item.nome" class="imagem">
-                <FontAwesomeIcon :icon="faVolumeHigh"/>
+                <span v-if="temas[0].nome === 'Animais'">
+                    <FontAwesomeIcon :icon="faVolumeHigh" size="2x"/>
+                </span>
                 <p>{{ item.nome }}</p>
             </div>
         </div>
