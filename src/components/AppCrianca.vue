@@ -12,8 +12,8 @@
         <div v-if="itensDoTema.length > 0" class="cards-container">
             <div v-for="item in itensDoTema" :key="item.id" class="card" @click="falarNome(item.nome)">
                 <img :src="item.imagem" :alt="item.nome" class="imagem">
-                <span v-if="temas[0].nome === 'Animais'">
-                    <FontAwesomeIcon :icon="faVolumeHigh" size="2x"/>
+                <span v-if="temaSelecionado.nome === 'Animais'" class="aparece" @click="som">
+                    <FontAwesomeIcon :icon="faVolumeHigh" size="2x" class="fa-icon"/>
                 </span>
                 <p>{{ item.nome }}</p>
             </div>
@@ -33,6 +33,9 @@ import { ref } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons'
 
+    const som = () => {
+        alert('som clicado')
+    }
 
     const temas = ref([
         {id: 1, nome: 'Animais', arquivo: 'animais.json'},
@@ -80,7 +83,9 @@ import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons'
 h1 {
     text-transform: uppercase;
 }
-
+.aparece{
+ color: red;
+}
 .tema-escolha {
   display: flex;
   gap: 10px;
@@ -134,6 +139,9 @@ h1 {
         width: 200px;
         height: 200px;
     }
+    .fa-icon {
+        color: #02264e;
+    }
 
 @media  (max-width:480px) {
     .tema-escolha {
@@ -155,9 +163,7 @@ h1 {
         width: 70px;
         height: 70px;
     }
-    .fa-icon {
-        color: #4CAF50;
-    }
+    
 }
 </style>
 
