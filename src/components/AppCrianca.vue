@@ -12,9 +12,9 @@
         <div v-if="itensDoTema.length > 0" class="cards-container">
             <div v-for="item in itensDoTema" :key="item.id" class="card" @click="falarNome(item.nome)">
                 <img :src="item.imagem" :alt="item.nome" class="imagem">
-                <span v-if="temaSelecionado.nome === 'Animais'" class="aparece">
+                <!-- <span v-if="temaSelecionado.nome === 'Animais'" class="aparece">
                     <FontAwesomeIcon :icon="faVolumeHigh" size="2x" class="fa-icon"/>
-                </span>
+                </span> -->
                 <p>{{ item.nome }}</p>
             </div>
         </div>
@@ -30,8 +30,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons'
+
 
   
 
